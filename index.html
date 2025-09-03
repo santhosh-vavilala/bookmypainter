@@ -229,7 +229,7 @@
       <div class="actions">
         <button id="themeToggle" class="btn btn-ghost" aria-pressed="false" title="Toggle theme">🌙</button>
         <a href="#estimate" class="btn btn-primary">Get Instant Quote</a>
-        <button class="btn btn-ghost menu" id="openMenu" aria-expanded="false">☰</button>
+        <button class="btn btn-ghost menu d-none" id="openMenu" aria-expanded="false">☰</button>
       </div>
     </div>
   </header>
@@ -393,7 +393,7 @@
             <li>Workmanship warranty</li>
           </ul>
           <div style="display:flex; gap:10px; margin-top:10px; flex-wrap:wrap">
-            <a class="btn btn-primary" id="bookCall" href="tel:+910000000000">Call to Book</a>
+            <a class="btn btn-primary" id="bookCall" href="tel:+919515220406">Call to Book</a>
             <a class="btn btn-ghost" id="mailtoQuote" href="#">Email me this quote</a>
           </div>
         </div>
@@ -587,7 +587,7 @@
       breakdown.innerHTML = `Area: ${a} sq ft • Base: ₹${m.base}/sqft • Finish: ${finish.value} • Paint: ${paint.value}<br>City & size factors applied. Includes 18% GST.`;
 
       const msg = encodeURIComponent(`BookMyPainter.in Quote:%0A%0ACustomer: ${nameEl.value || '-'}%0APhone: ${phone.value || '-'}%0ACity: ${city.value}%0ASize: ${bhk.value} • ${a} sq ft%0APaint: ${paint.value} • Finish: ${finish.value} • Coats: ${coats.value}%0AStart: ${start.value || '-'}%0A%0ATotal Estimate: ${toINR(total)} (incl. GST)%0A%0AReply to confirm a free site visit.`);
-      waBtn.href = `https://wa.me/${(phone.value || '910000000000').replace(/\D/g,'')}?text=${msg}`;
+      waBtn.href = `https://wa.me/${(phone.value || '919515220406').replace(/\D/g,'')}?text=${msg}`;
       mailtoQuote.href = `mailto:${'hello@bookmypainter.in'}?subject=${encodeURIComponent('Painting Quote — BookMyPainter.in')}&body=${msg}`;
     }
 
